@@ -7,6 +7,7 @@ const server = createServer(async (req, res) => {
     try {
         if (req.url.startsWith('/api')) {
             await handlerApiRoute(req, res);
+            console.log('api response')
             return;
         }
         await handlerStaticFile(req, res);
